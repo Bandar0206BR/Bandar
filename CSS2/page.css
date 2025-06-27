@@ -1,0 +1,18 @@
+#page1 .front {
+    background: linear-gradient(to right, #f5b36c, #e07b28);
+}
+#page1 .back {
+    background-color: white;
+}
+
+.page .front {
+    background-color: #ffea006b;
+}
+/*
+#page2 .back {
+    background-color: #a9d0f5;
+} */
+
+/* Similarly for page3, page4, etc. */
+
+

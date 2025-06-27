@@ -1,0 +1,105 @@
+/* .container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ } */
+
+.rope {
+    width: 5px;
+    height: 150px;
+    background-color: #ccc;
+    cursor: pointer;
+    margin-bottom: 20px;
+    animation: swing 1s ease;
+    transition: transform 0.5s;
+}
+
+.rope-container {
+    height: 150px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.swing {
+    animation: swingAnim 0.6s ease;
+}
+
+@keyframes swingAnim {
+    /* 0% {
+         transform: rotate(0deg);
+     }
+
+     25% {
+         transform: rotate(90deg);
+     }
+
+     50% {
+         transform: rotate(180deg);
+     }
+
+     75% {
+         transform: rotate(270deg);
+     } */
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.bulb {
+    width: 100px;
+    height: 100px;
+    background-color: #444;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: none;
+    cursor: pointer;
+    margin-bottom: 30px;
+    padding: 20px;
+    
+}
+
+/* Rotate animation */
+@keyframes rotateSun {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Glow pulse animation */
+  @keyframes glowPulse {
+    0% {
+      box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 40px rgba(255, 255, 0, 1);
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(255, 255, 0, 0.5);
+    }
+  }
+
+.bulb.on {
+    background-color: yellow;
+    box-shadow: 0 0 50px yellow;
+    animation: rotateSun 10s linear infinite, glowPulse 2s ease-in-out infinite;
+}
+
+.flipbook {
+    display: none;
+    margin-top: 40px;
+}
+
+.flipbook.visible {
+    display: block;
+}
+
+.flipbook h1 {
+    /* color: white; */
+    font-family: cursive;
+}

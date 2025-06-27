@@ -1,0 +1,106 @@
+
+#page1 .calendar {
+    background: rgb(255, 255, 255); /* ya transparent karna ho to transparent likh sakte ho */
+    padding: 10px;
+    border-radius: 10px; /* thoda smooth rounded feel ke liye */
+}
+
+.calendar {
+    width: 400px;
+    border: 2px solid #000000;
+    margin: 20px auto;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* .calendar-grid{
+    background-color: #aaaaaa;
+}
+
+.day-number{
+    color: #838383;
+} */
+
+.calendar-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: 'Lobster', cursive;
+
+}
+
+.flipped .front .calendar {
+    visibility: hidden;
+}
+
+.flipped .back .calendar {
+    visibility: visible;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+}
+
+.calendar-grid div {
+    padding: 10px;
+    border: 1.6px solid #000000;
+}
+
+.calendar-grid .day-name {
+    font-weight: bold;
+}
+
+.calendar-grid .day-number {
+    background-color: #f0f0f0;
+}
+
+.day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #f0f0f0;
+    /* fix height if not already */
+    width: 50px;
+    border: 1px solid #aaa;
+    font-size: 16px;
+}
+
+.heart-day .heart {
+    font-size: 24px;
+    /* Bigger heart */
+    line-height: 1;
+    display: inline-block;
+}
+
+.heart {
+    font-size: 4rem;
+    animation: heartbeat 1s infinite;
+    cursor: pointer;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1.4);
+    }
+
+    25% {
+        transform: scale(1.6);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    75% {
+        transform: scale(1.6);
+    }
+
+    100% {
+        transform: scale(1.4);
+    }
+}

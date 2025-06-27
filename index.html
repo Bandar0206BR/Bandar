@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meri Bandariya🥹</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS2/body.css">
+    <link rel="stylesheet" href="../CSS2/popup.css">
+    <link rel="stylesheet" href="../CSS2/calendar.css">
+    <link rel="stylesheet" href="../CSS2/bulb.css">
+    <link rel="stylesheet" href="../CSS2/curropt.css">
+    <link rel="stylesheet" href="../CSS2/page.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap');
+
+        .base {
+            position: absolute;
+            left: 30.10%;
+            top: 37.80%;
+            font-size: 1.5rem;
+            background-color: black;
+            height: 3px;
+            width: 165px;
+            margin: 20px 0;
+        }
+
+        .two {
+            position: absolute;
+            left: 35%;
+            top: 35.40%;
+            font-size: 1.5rem;
+            background-color: #a88679;
+            height: 15px;
+            width: 128px;
+            margin: 20px 0;
+            border-radius: 20px;
+        }
+
+        .three {
+            position: absolute;
+            left: 35%;
+            top: 34.60%;
+            font-size: 1.5rem;
+            background-color: black;
+            height: 5px;
+            width: 128px;
+            margin: 20px 0;
+            border-radius: 20px;
+        }
+
+        .four {
+            position: absolute;
+            left: 35%;
+            top: 32%;
+            font-size: 1.5rem;
+            background-color: #a88679;
+            height: 15px;
+            width: 128px;
+            margin: 20px 0;
+            border-radius: 20px;
+        }
+
+        .five {
+            position: absolute;
+            left: 35%;
+            top: 31.20%;
+            font-size: 1.5rem;
+            background-color: black;
+            height: 5px;
+            width: 128px;
+            margin: 20px 0;
+            border-radius: 20px;
+        }
+
+        .six {
+            position: absolute;
+            left: 35%;
+            top: 28.70%;
+            font-size: 1.5rem;
+            background-color: #a88679;
+            height: 15px;
+            width: 128px;
+            margin: 20px 0;
+            border-radius: 20px;
+        }
+
+
+        .cake {
+            background: #ffffff;
+            border-radius: 10px;
+            position: absolute;
+            top: 466.50px;
+            left: 51%;
+            margin-left: -2.4px;
+            margin-top: -8.33333333px;
+            width: 5px;
+            height: 35px;
+            transform: translateY(-300px);
+            backface-visibility: hidden;
+            animation: in 500ms 6s ease-out forwards;
+        }
+
+        .cake:after,
+        .cake:before {
+            background: rgba(255, 0, 0, 0.4);
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2.22222222px;
+        }
+
+        .cake:after {
+            top: 25%;
+            left: 0;
+        }
+
+        .cake:before {
+            top: 45%;
+            left: 0;
+        }
+
+
+        .fuego {
+            border-radius: 100%;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            margin-left: -2.6px;
+            width: 6.66666667px;
+            height: 18px;
+        }
+
+        .fuego:nth-child(1) {
+            animation: fuego 2s 0s infinite;
+        }
+
+        .fuego:nth-child(2) {
+            animation: fuego 1.5s 0s infinite;
+        }
+
+        .fuego:nth-child(3) {
+            animation: fuego 1s 0s infinite;
+        }
+
+        .fuego:nth-child(4) {
+            animation: fuego 0.5s 0s infinite;
+        }
+
+        .fuego:nth-child(5) {
+            animation: fuego 0.2s 0s infinite;
+        }
+
+        /* ============================================== Animation Fire
+      */
+
+        @keyframes fuego {
+
+            0%,
+            100% {
+                background: rgba(254, 248, 97, 0.5);
+                box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+                transform: translateY(0) scale(1);
+            }
+
+            50% {
+                background: rgba(255, 50, 0, 0.1);
+                box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+                transform: translateY(-20px) scale(0);
+            }
+        }
+
+        /* @keyframes in {
+        to {
+          transform: translateY(0);
+        }
+      }  */
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="heartContainer">
+            <span id="heartEmoji">❤️</span>
+        </div>
+
+
+
+        <div class="rope-container" onclick="pullRope()">
+            <div class="rope" id="rope"></div>
+        </div>
+
+        <div onclick="pullRope()" class="bulb" id="bulb"></div>
+
+    </div>
+
+    <div class="flipbook" id="flipbook">
+        <h1 style="font-family: 'Great Vibes', cursive">💕I love u Bandariya💕</h1>
+        <div class="book" id="book">
+
+            <div class="page" id="page1">
+                <div class="front">
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <span>July 2025</span>
+                        </div>
+                        <div class="calendar-grid">
+                            <div class="day-name">Sun</div>
+                            <div class="day-name">Mon</div>
+                            <div class="day-name">Tue</div>
+                            <div class="day-name">Wed</div>
+                            <div class="day-name">Thu</div>
+                            <div class="day-name">Fri</div>
+                            <div class="day-name">Sat</div>
+
+                            <div class="day-number"></div>
+                            <div class="day-number"></div>
+                            <div class="day-number">1</div>
+                            <div class="day-number">2</div>
+                            <div class="day-number">3</div>
+                            <div class="day-number">4</div>
+                            <div class="day-number">5</div>
+
+                            <div onclick="showMessage()" class="day heart-day"><span class="heart">💚</span></div>
+                            <div class="day-number">7</div>
+                            <div class="day-number">8</div>
+                            <div class="day-number">9</div>
+                            <div class="day-number">10</div>
+                            <div class="day-number">11</div>
+                            <div class="day-number">12</div>
+
+                            <div class="day-number">13</div>
+                            <div class="day-number">14</div>
+                            <div class="day-number">15</div>
+                            <div class="day-number">16</div>
+                            <div class="day-number">17</div>
+                            <div class="day-number">18</div>
+                            <div class="day-number">19</div>
+
+                            <div class="day-number">20</div>
+                            <div class="day-number">21</div>
+                            <div class="day-number">22</div>
+                            <div class="day-number">23</div>
+                            <div class="day-number">24</div>
+                            <div class="day-number">25</div>
+                            <div class="day-number">26</div>
+
+                            <div class="day-number">27</div>
+                            <div class="day-number">28</div>
+                            <div class="day-number">29</div>
+                            <div class="day-number">30</div>
+                            <div class="day-number"></div>
+                            <div class="day-number"></div>
+                            <div class="day-number"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="back">
+                    <div class="text">Tum meri duniya ho 💖</div>
+                </div>
+            </div>
+
+
+
+            <div class="page" id="page2">
+                <div class="front">
+                    <img src="../IMAGE/kaddu1.jpg" alt="">
+                    <div class="text">Yaad hai kaddu ye hamari sath me sabse pehli photo hai ❤️jisme aap mujhe smill
+                        kara rhi ho 😁
+
+                        <p style="color: rgb(63, 58, 58); bottom: 5px; left: 83%; position: absolute;">14/02/2024</p>
+                        <p style="color: rgb(63, 58, 58); left: 85.30%; position: absolute;">01:55 pm</p>
+
+
+                    </div>
+
+                </div>
+                <!-- <div class="card-side back">
+                    <h2>For You 💌</h2>
+                    <h6>Jab tak tum meri zindagi me thi,<br> har din ek special pal tha 🥰 <br> tumhare bina ekdam akela
+                        ho
+                        gaya hu <br> KADDU <br> kuch bhi acha hi nhi lag <br> rha hai </h6>
+                    <H3>I miss you bandariya 🌸🙈 <br>🫶💚</H3>
+                </div> -->
+            </div>
+
+
+
+            <div class="page" id="page3">
+                <div class="front">
+                    <img src="../IMAGE/kaddu2.jpg" alt="">
+                    <div class="text">Kitna maja aaya tha yrr kaddu us din tumhare sath fir se kab balo ki choti bana
+                        rhi bohot miss karha hu mai yrr ye sab please jaldi aa jao yrr
+
+                        <p style="color: rgb(63, 58, 58); bottom: -12px; left: 70%; position: absolute;">18/03/2024
+                            12:29 pm</p>
+                        <!-- <p style="color: rgb(63, 58, 58); left: 85.30%; position: absolute;"></p> -->
+
+
+                    </div>
+                </div>
+                <!-- <div class="back">
+                    <div class="text">Har pal tumhare saath chaahiye 💫</div>
+                </div> -->
+            </div>
+
+
+            <div class="page" id="page4">
+                <div class="front">
+                    <img src="../IMAGE/kaddu3.jpeg" alt="">
+                    <div style="top: 78%; background: none;" class="text">Ye sath me hamari last photo😊 hai kitne ache
+                        lagte hai yrr hamlog sath me ha thik hai mana aap bohot sundar ho aur mai nhi hu par iska matlb
+                        ye thodi hai ki mujhe pyar karne ka hak nhi
+
+                        <p style="color: rgb(63, 58, 58); bottom: -12px; left: 70%; position: absolute;">14/08/2024
+                            02:59 pm</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="page" id="page5">
+                <div class="front">
+                    <!-- <img src="https://i.imgom/9XcRMK0.jpeg" alt=""> -->
+                    <video width="500" controls controlsList="nodownload">
+                        <source src="../VIDEO/VN20250507_061947.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <div class="text">Meri zindagi mein tumse behtareen kuch nahi hai 💖</div>
+                </div>
+
+            </div>
+
+
+
+            <div class="page" id="page6">
+                <div class="front">
+                    <!-- <img src="https://i.imgom/9XcRMK0.jpeg" alt=""> -->
+                    <audio style="margin-top: 10px;" width="100%" controls controlsList="nodownload">
+                        <source src="../AUDIO/audio2.mp3" type="audio/mp3">
+                        Your browser does not support the video tag.
+                    </audio>
+
+                    <p style="margin-left: 5px;">Tumhari aawaj sunane ke liye mere kaan taras gaye hai yrr kaddu, yaad
+                        hai mai tumse hamesha voice msg karne ko kehta tha us time pata nhi ki ek din aisa bhi hoga
+                        tumse baat hi band ho jayegi ek baar apni aawaj suna do yrr🥺</p>
+
+                    <audio style="margin-top: 10px;" width="100%" controls controlsList="nodownload">
+                        <source src="../AUDIO/audio1.mp3" type="audio/mp3">
+                        Your browser does not support the video tag.
+                    </audio>
+
+                    <p style="margin-left: 5px;">Mai bhi tumse bohot pyar karta hu yrr kaddu pleasekaddu mujhe mera pyar
+                        lota do yrr please🤧</p>
+
+                    <div class="text">Meri zindagi mein tumse behtareen kuch nahi hai 💖</div>
+                </div>
+                <div class="back">
+                    <div class="text">Har din tumhe pyaar karna chahta hoon 💕</div>
+
+                </div>
+            </div>
+
+
+            <div class="page" id="page7">
+                <div class="front">
+                    <img src="../IMAGE/kaddu5.jpeg" alt="">
+                    <div style="top: 78%; background: none;" class="text">Kaddu yrr tumko jitni baar bhi dekhu tumpe
+                        sirf pyar hi aata hai yrr kyu ho itni achi itni cute, pata hai tumne mujhe yahi photo last bheji
+                        thi iske baad to kuch bheja hi nhi, I miss you Bandariya🥹</div>
+                    <p style="color: rgb(63, 58, 58); bottom: -2px; left: 75%; position: absolute;">29/11/2024 10:16</p>
+                </div>
+            </div>
+
+
+            <div class="page" id="page8">
+                <div class="front">
+                    <!-- <img src="https://i.imgom/9XcRMK0.jpeg" alt=""> -->
+                    <video width="500" controls controlsList="nodownload">
+                        <source src="../VIDEO/berkha1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <div class="text">Meri zindagi mein tumse behtareen kuch nahi hai 💖</div>
+                </div>
+
+            </div>
+
+            <div class="page" id="page9">
+                <div class="front">
+                    <!-- <img src="https://i.imgom/9XcRMK0.jpeg" alt=""> -->
+                    <video width="500" controls controlsList="nodownload">
+                        <source src="../VIDEO/berkha2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <div class="text">Meri zindagi mein tumse behtareen kuch nahi hai 💖</div>
+                </div>
+
+            </div>
+
+            <div class="page" id="page10">
+                <div class="front">
+                    <!-- <img src="../IMAGE/kaddu5.jpeg" alt=""> -->
+                    <div class="text" style="color: black; top: 0px;"><p>Tumko pata hai kaddu maine mandir jana chhod diya jab se tumne mujhe chhoda maine tumse kitni baar kaha tha mere sath ek baar mandir chal lo lekin tum kabhi aai hi nhi aur ab bhagwan se meri banati hi nhi hai ab to tumhare sath hi jaunga mandir ya fir is janm ke liye mandir ban hai mere liye🥺 <br> sayad mere sath ek baar mandir chal liya hota to sayad ham sath hote aaj fir to sayad bhagwan ko mera pyad dekh ke mujhe taras aa jati, ek baat bolu kaddu abhi kuch nhi kharab huva hai ham fir se sab kuch thik kar sakte hai yrr lekin bina tumhare saath ke ye possible nhi hai yrr intejar kar rha hu tumhara aaa jao n yrr kaddu <br> aisa nhi hai ki tum mujhse pyar nhi karti ho mai janta hu tum karti ho us pyar ke liye hi yrr ek last time aa jao tumhare bina nhi re pa rha hu mai yrr mai roj tumhe yaad karta hu yrr</p></div>
+
+                    <!-- <div style="margin: 5px;" class="text">Kaddu yrr tumko jitni baar bhi dekhu tumpe sirf pyar hi aata hai yrr kyu
+                        ho itni achi itni cute, pata hai tumne mujhe yahi photo last bheji thi iske baad to kuch bheja
+                        hi nhi, I miss you Bandariya🥹
+                    </div>                 -->
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="signature">
+            <p>Tumhara Bandar🖋️</p>
+        </div>
+
+        <div class="buttons">
+            <button id="previousButton" onclick="prevPage()">⬅️ Previous</button>
+            <button id="nextButton" onclick="nextPage()">Next ➡️</button>
+        </div>
+
+
+        <div onclick="hideMessage()" id="popup" style="display: none;">
+            <div class="popup-box" style="background-color: #899998;">
+                <span class="close" onclick="hideMessage()">&times;</span>
+                <!-- <h2>Hey My Love ❤️</h2> -->
+                <div class="text" style="margin-top: 2px; font-size: 20px; color: darkred;">
+                    <h2>happy birthday!</h2>
+                    <h2 class="" style="margin-left: 7%;">Bandariya💕</h2>
+                    <!-- <p class="name">Kaddu</p> -->
+                </div>
+                <!-- <p>
+                Tum meri zindagi ki wo khushi ho jise main har din mehsoos karta hoon.
+                Bas tum ho, toh sab kuch hai... 💖
+             </p> -->
+
+                <div class="container">
+
+                    <h4 style="position: absolute; margin-top: -110px; margin-left: -30px;">💛</h4>
+                    <h4 style="position: absolute; margin-top: -85px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -60px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -35px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -10px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 15px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 40px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 65px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 90px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 115px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 140px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 165px; margin-left: -30px;">💛</h4>
+                    <h4 style="position: absolute; margin-top: 190px; margin-left: -30px;">💛</h4>
+                    <h4 style="position: absolute; margin-top: 215px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 240px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 265px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 290px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 315px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 340px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 365px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 390px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 415px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 440px; margin-left: -30px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 465px; margin-left: -30px;">💛</h4>
+
+                    <h4 style="position: absolute; margin-top: -110px; margin-left: 346px;">💛</h4>
+                    <h4 style="position: absolute; margin-top: -85px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -60px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -35px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -10px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 15px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 40px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 65px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 90px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 115px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 140px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 165px; margin-left: 346px;">💛</h4>
+                    <h4 style="position: absolute; margin-top: 190px; margin-left: 346px;">💛</h4>
+                    <h4 style="position: absolute; margin-top: 215px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 240px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 265px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 290px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 315px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 340px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 365px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 390px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 415px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 440px; margin-left: 346px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 465px; margin-left: 346px;">💛</h4>
+
+
+                    <h4 style="position: absolute; margin-top: -110px; margin-left: -5px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -110px; margin-left: 20px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -110px; margin-left: 45px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -110px; margin-left: 70px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -110px; margin-left: 95px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -110px; margin-left: 120px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -110px; margin-left: 145px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -110px; margin-left: 170px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -110px; margin-left: 195px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -110px; margin-left: 220px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -110px; margin-left: 245px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -110px; margin-left: 270px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -110px; margin-left: 295px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: -110px; margin-left: 320px;">💖</h4>
+
+
+
+                    <h4 style="position: absolute; margin-top: 465px; margin-left: -5px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 465px; margin-left: 20px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 465px; margin-left: 45px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 465px; margin-left: 70px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 465px; margin-left: 95px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 465px; margin-left: 120px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 465px; margin-left: 145px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 465px; margin-left: 170px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 465px; margin-left: 195px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 465px; margin-left: 220px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 465px; margin-left: 245px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 465px; margin-left: 270px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 465px; margin-left: 295px;">💖</h4>
+                    <h4 style="position: absolute; margin-top: 465px; margin-left: 320px;">💖</h4>
+
+
+
+
+                    <div class="cake">
+                        <div class="fuego"></div>
+                        <div class="fuego"></div>
+                        <div class="fuego"></div>
+                        <div class="fuego"></div>
+                        <div class="fuego"></div>
+                    </div>
+
+                    <div class="base"></div>
+                    <div class="layer two"></div>
+                    <div class="layer three"></div>
+                    <div class="layer four"></div>
+                    <div class="layer five"></div>
+                    <div class="layer six"></div>
+                </div>
+
+
+
+                <div style="margin-top: 170px; color: rgb(50, 50, 50);">
+                    <p>Tumko pata hai kaddu mujhe laga tha tum mere sath hogi apne birthday pe yaha mere sath sabse dur
+                        jaha ham bina kisi dar ke sath rehte tumhara birthday cellebrate karte lekin aisa lagta hai
+                        jaise mai akele hi rehne ke bana hu pyar pana to meri kismat me hi nhi hai💕</p>
+                    <p>tumhara Bandar tumhe bohot miss karta hai, kya tumhe bhi yaad aati hai </p>
+                    <p>please aa jao yrr kaddu ab apne bandar ko aur mat satao yrr ab tumhari ye duri nhi sahi jati yrr
+                        kaddu🫶💚 </p>
+                    <!-- <img width="50px" src="../IMAGE/image1.jpeg" alt="Her Photo"> -->
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Flipbook content here -->
+    <!-- <p style="color:white;">Ye tumhari yaadon ka pitara hai 💖</p> -->
+    </div>
+
+
+
+    <script src="../JS/curropt.js"></script>
+    <script src="../JS/bulb.js"></script>
+    <script src="../JS/pages.js"></script>
+    <script src="../JS/popup.js"></script>
+    <script src="../JS/video.js"></script>
+
+</body>
+
+</html>

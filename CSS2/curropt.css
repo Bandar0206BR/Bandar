@@ -1,0 +1,35 @@
+#heartContainer {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+#heartEmoji {
+    font-size: 2.5rem;
+    transition: transform 0.3s;
+}
+
+.break {
+    animation: breakHeart 1s forwards;
+}
+
+@keyframes breakHeart {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.3) rotate(10deg);
+    }
+
+    60% {
+        transform: scale(0.8) rotate(-10deg);
+    }
+
+    100% {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}
